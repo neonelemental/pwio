@@ -3,7 +3,8 @@ module Profightdb
     queue_as :default
 
     def perform(url)
-      Profightdb::Scraper.scrape_show(url)
+      local_file = Profightdb::Scraper.scrape_show(url)
+      Profightdb.create_page_visit(local_file.url, local_file.path)
     end
   end
 end

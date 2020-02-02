@@ -17,7 +17,7 @@ module Profightdb
         file.close
       end
 
-      content
+      LocalFile.new(url, content, path)
     end
 
     def file_path(url, cache_by_date: false, organize_by: nil)
