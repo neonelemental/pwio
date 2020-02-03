@@ -39,17 +39,5 @@ module Utilities
 
       "#{base_path}/#{basename}.html"
     end
-
-    def read(path)
-      File.open(path) do |file|
-        if block_given?
-          yield file.read
-        else
-          file.read
-        end
-
-        file.close
-      end
-    end
   end
 end
