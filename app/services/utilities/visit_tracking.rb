@@ -2,7 +2,9 @@ module Utilities
   module VisitTracking
     def visit(scraper, url)
       local_file = scraper.scrape(url)
-      create_visit(local_file)
+      if local_file # an html document was fetched.
+        create_visit(local_file)
+      end
     end
 
     private
