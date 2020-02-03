@@ -1,7 +1,5 @@
 module Profightdb
   module FileHandler
-    extend self
-
     def save(url, prevent_refetching: true, organize_by: nil, cache_by_date: false)
       path = file_path(url, cache_by_date: cache_by_date, organize_by: organize_by)
 
