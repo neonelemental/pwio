@@ -1,11 +1,15 @@
 module Profightdb
   module Scrapers
     module ShowScraper
-      extend Profightdb::FileHandler
+      extend Utilities::FileHandling
       extend self
 
       def scrape(url)
-        save(url, organize_by: :show)
+        save(
+            url,
+            organize_by: :show,
+            base_path: Profightdb::Constants::HTML_CACHE_DIR
+          )
       end
     end
   end

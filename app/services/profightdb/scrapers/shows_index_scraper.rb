@@ -1,11 +1,17 @@
 module Profightdb
   module Scrapers
     module ShowsIndexScraper
-      extend Profightdb::FileHandler
+      extend Utilities::FileHandling
       extend self
 
       def scrape(url)
-        save(url, prevent_refetching: false, cache_by_date: true, organize_by: :shows_index)
+        save(
+            url,
+            prevent_refetching: false,
+            cache_by_date: true,
+            organize_by: :shows_index,
+            base_path: Profightdb::Constants::HTML_CACHE_DIR
+          )
       end
     end
   end

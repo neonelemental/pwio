@@ -1,8 +1,6 @@
 module Profightdb
-  extend VisitTracking
+  extend Utilities::VisitTracking
   extend self
-
-  private
 
   def website
     Website.find_by!(name: "Profightdb")
