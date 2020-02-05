@@ -5,7 +5,8 @@ module ScraperApi
     ERROR_STRINGS = [
       "Raw error:",
       "Unauthorized request",
-      "503 Service Service Unavailable"
+      "503 Service Service Unavailable",
+      "502 Bad Gateway",
     ].freeze
   end
 end

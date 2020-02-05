@@ -3,7 +3,3 @@ delayed_job_worker_2: rake jobs:work
 delayed_job_worker_3: rake jobs:work
 delayed_job_worker_4: rake jobs:work
 delayed_job_worker_5: rake jobs:work
-delayed_job_worker_6: rake jobs:work
-delayed_job_worker_7: rake jobs:work
-delayed_job_worker_8: rake jobs:work
-delayed_job_worker_9: rake jobs:work

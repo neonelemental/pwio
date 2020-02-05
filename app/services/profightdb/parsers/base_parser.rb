@@ -6,11 +6,11 @@ module Profightdb
         @context = Nokogiri.parse(html)
       end
 
-      private
-
       def css_select(css_selector)
         @context.css(css_selector)
       end
+
+      private
 
       def to_url(node)
         uri_or_url = node.attributes["href"].value
