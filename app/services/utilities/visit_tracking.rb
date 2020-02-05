@@ -1,7 +1,7 @@
 module Utilities
   module VisitTracking
-    def visit(scraper, url)
-      local_file = scraper.scrape(url)
+    def visit(scraper, url, prevent_refetching: true)
+      local_file = scraper.scrape(url, prevent_refetching: prevent_refetching)
       if local_file # an html document was fetched.
         create_visit(local_file)
       end
