@@ -1,7 +1,7 @@
 module Profightdb
   class ShowParserJob < ApplicationJob
     def perform(show_html_path)
-      web_page = WebPage.by_local_file_path(show_html_path)
+      web_page = Scraping::WebPage.by_local_file_path(show_html_path)
       parser = Profightdb::Parsers::ShowPageParser.new(web_page.to_html)
 
       show = web_page.web_pageable || Show.new

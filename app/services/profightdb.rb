@@ -3,6 +3,6 @@ module Profightdb
   extend self
 
   def website
-    Website.find_by!(name: "Profightdb")
+    Scraping::Website.find_by!(name: "Profightdb")
   end
 end

@@ -11,11 +11,13 @@ module Scraping
 
     def create_visit(local_file)
       web_page = find_or_create_web_page(local_file.url)
-      PageVisit.create!(web_page: web_page, file_path: local_file.path, visited_at: DateTime.now)
+      Scraping::PageVisit.create!(web_page: web_page,
+                                  file_path: local_file.path,
+                                  visited_at: DateTime.now)
     end
 
     def find_or_create_web_page(url)
-      WebPage.find_or_create_by!(url: url, website: website)
+      Scraping::WebPage.find_or_create_by!(url: url, website: website)
     end
 
     def website
