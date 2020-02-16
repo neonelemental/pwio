@@ -1,4 +1,4 @@
-module Utilities
+module Scraping
   module FileHandling
     class LocalFile
       attr_reader :url,

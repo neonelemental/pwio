@@ -1,7 +1,7 @@
 module Profightdb
   module Scrapers
     module ShowsIndexScraper
-      extend Utilities::FileHandling
+      extend Scraping::FileHandling
       extend self
 
       def scrape(url, prevent_refetching: false)

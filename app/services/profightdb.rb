@@ -1,5 +1,5 @@
 module Profightdb
-  extend Utilities::VisitTracking
+  extend Scraping::VisitTracking
   extend self
 
   def website

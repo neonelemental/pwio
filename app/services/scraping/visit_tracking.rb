@@ -1,4 +1,4 @@
-module Utilities
+module Scraping
   module VisitTracking
     def visit(scraper, url, prevent_refetching: true)
       local_file = scraper.scrape(url, prevent_refetching: prevent_refetching)

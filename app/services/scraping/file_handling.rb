@@ -1,4 +1,4 @@
-module Utilities
+module Scraping
   module FileHandling
     def save(url, base_path:, prevent_refetching: true, organize_by: nil, cache_by_date: false)
       path = file_path(
